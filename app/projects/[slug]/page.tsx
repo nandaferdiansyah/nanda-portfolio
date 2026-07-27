@@ -8,6 +8,7 @@ import Breakline from "@/common/components/elements/Breakline";
 import StackIcon from "@/common/components/elements/StackIcon";
 import { PROJECTS } from "@/common/constants/projects";
 import { getStacksByName } from "@/common/constants/stacks";
+import ProjectScreenshots from "@/modules/projects/components/ProjectScreenshots";
 
 type ProjectPageProps = { params: Promise<{ slug: string }> };
 
@@ -85,6 +86,24 @@ export default async function ProjectDetailPage({
       )}
 
       <Breakline className="my-6" />
+
+      {project.screenshots && (
+        <div className="mb-8">
+          <ProjectScreenshots
+            title={project.title}
+            subtitle={project.description}
+            screenshots={project.screenshots}
+            links={[
+              ...(project.link_demo
+                ? [{ label: "Visit project", href: project.link_demo }]
+                : []),
+              ...(project.link_repo
+                ? [{ label: "Source code", href: project.link_repo }]
+                : []),
+            ]}
+          />
+        </div>
+      )}
 
       <div className="space-y-4 leading-7 text-neutral-600 dark:text-neutral-300">
         {project.content.map((paragraph, index) => (

@@ -56,6 +56,8 @@ export interface ProjectProps {
   stacks: string[];
   link_demo?: string;
   link_repo?: string;
+  /** Screenshots shown above the write-up, opened in a walkthrough popup. */
+  screenshots?: { src: string; caption: string }[];
   is_featured: boolean;
   content: string[];
   highlights?: string[];

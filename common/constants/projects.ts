@@ -1,4 +1,5 @@
 import type { ProjectProps } from "../types";
+import { E_SIMPEL_SCREENSHOTS } from "./e-simpel";
 
 export const PROJECTS: ProjectProps[] = [
   {
@@ -11,6 +12,7 @@ export const PROJECTS: ProjectProps[] = [
     stacks: ["BPMN", "Next.js", "Node.js", "PostgreSQL", "JavaScript"],
     link_demo: "https://tlrb.ortalamr.id/e-sop-atrbpn/",
     link_repo: "https://github.com/indras1477/tatalaksana-atrbpn",
+    screenshots: E_SIMPEL_SCREENSHOTS,
     is_featured: true,
     content: [
       "SIMPEL (Sistem Informasi Manajemen Prosedur dan Pelayanan) grew out of the process architecture work: once every process was mapped, the ministry needed a single system to draft, approve, and publish the documents that come from it.",

@@ -1,14 +1,34 @@
+import { E_SIMPEL_SCREENSHOTS, type ScreenshotProps } from "./e-simpel";
+
 export interface PortfolioItemProps {
   src: string;
   title: string;
   /** Must match a skill name in stacks.tsx so the tool badge gets its icon. */
   tool: string;
   description: string;
+  /** Web/app work opens a walkthrough popup instead of a single image. */
+  screenshots?: ScreenshotProps[];
+  links?: { label: string; href: string }[];
 }
 
 const DIR = "/images/portofolio desain";
 
 export const PORTFOLIO_ITEMS: PortfolioItemProps[] = [
+  {
+    src: "/images/e-simpel/Dashboard.png",
+    title: "SIMPEL — Ministry Procedure & Service System",
+    tool: "Web System",
+    description:
+      "Web system for the Ministry of ATR/BPN covering Process Map, BPMN, SOP, and Service Standards — from drafting studio to ministerial determination.",
+    screenshots: E_SIMPEL_SCREENSHOTS,
+    links: [
+      { label: "Visit SIMPEL", href: "https://tlrb.ortalamr.id/e-sop-atrbpn/" },
+      {
+        label: "Read the case study",
+        href: "/projects/simpel-ketatalaksanaan-system",
+      },
+    ],
+  },
   {
     src: `${DIR}/Solidworks1.jpg`,
     title: "Mining Dump Truck",
