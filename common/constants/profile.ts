@@ -48,5 +48,5 @@ export const METADATA = {
     "Fusion 360",
     "Portfolio",
   ],
-  url: "https://nanda-portfolio.vercel.app",
+  url: "https://nanda-portfolio-flax.vercel.app",
 } as const;
