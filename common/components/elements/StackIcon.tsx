@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import cn from "@/common/libs/clsxm";
 import type { StackProps } from "@/common/types";
 
@@ -7,8 +9,8 @@ interface StackIconProps {
 }
 
 /**
- * Glass-style tile used on the skills grid. Brands that Simple Icons
- * does not ship a glyph for fall back to a monogram badge.
+ * Tile used on the skills grid. Brand artwork sits on a neutral surface so the
+ * logo colours stay readable; glyph and monogram tiles use the brand colour.
  */
 const StackIcon = ({ stack, showLabel = true }: StackIconProps) => {
   return (
@@ -16,13 +18,25 @@ const StackIcon = ({ stack, showLabel = true }: StackIconProps) => {
       <div
         className={cn(
           "flex h-12 w-12 items-center justify-center rounded-2xl text-white shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:rotate-6 group-hover:shadow-lg",
-          stack.color,
+          stack.image
+            ? "border border-neutral-200 bg-white p-2 dark:border-neutral-700 dark:bg-neutral-800"
+            : stack.color,
         )}
       >
-        {stack.icon ?? (
-          <span className="text-[11px] font-bold tracking-tight">
-            {stack.monogram}
-          </span>
+        {stack.image ? (
+          <Image
+            src={stack.image}
+            alt={stack.name}
+            width={32}
+            height={32}
+            className="h-full w-full object-contain"
+          />
+        ) : (
+          (stack.icon ?? (
+            <span className="text-[11px] font-bold tracking-tight">
+              {stack.monogram}
+            </span>
+          ))
         )}
       </div>
       {showLabel && (

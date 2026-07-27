@@ -82,6 +82,8 @@ export interface SocialMediaProps {
 export interface StackProps {
   name: string;
   icon?: ReactNode;
+  /** Path under /public — takes precedence over `icon` and `monogram`. */
+  image?: string;
   monogram?: string;
   color: string;
   categories: SkillCategory[];

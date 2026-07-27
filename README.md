@@ -76,7 +76,9 @@ All content lives in plain TypeScript files under `common/constants/` — no CMS
 
 ### Skill icons
 
-Icons come from Simple Icons via `react-icons`. Entries without a glyph — brands like SolidWorks, Fusion 360, Excel, Power BI, SPSS, Matlab, Tableau, and every Business Process method (BPMN, Six Sigma, Lean, TPM, Kanban, Kaizen, VSM) — use a coloured monogram badge instead. Set `monogram` and `color` on the entry in `stacks.tsx`.
+Each entry picks its artwork in this order: `image` (a file under `public/images/stacks/`), then `icon` (a Simple Icons glyph from `react-icons`), then `monogram`. SolidWorks, Blender, Python, Matlab, and Tableau use downloaded [Icons8](https://icons8.com) artwork — the free licence requires the credit line rendered in the sidebar footer, so keep it if you keep the icons.
+
+Entries without a glyph — brands like SolidWorks, Fusion 360, Excel, Power BI, SPSS, Matlab, Tableau, and every Business Process method (BPMN, Six Sigma, Lean, TPM, Kanban, Kaizen, VSM) — use a coloured monogram badge instead. Set `monogram` and `color` on the entry in `stacks.tsx`.
 
 ### The Instagram feed on `/creations`
 

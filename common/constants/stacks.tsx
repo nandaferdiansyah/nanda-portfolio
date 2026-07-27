@@ -2,7 +2,6 @@ import {
   SiAnsys,
   SiAutocad,
   SiAutodesk,
-  SiBlender,
   SiCss,
   SiHtml5,
   SiJavascript,
@@ -13,7 +12,6 @@ import {
   SiPhp,
   SiPostgresql,
   SiPrisma,
-  SiPython,
   SiR,
   SiSketchup,
   SiTypescript,
@@ -24,13 +22,13 @@ import type { StackProps } from "../types";
 const iconSize = 20;
 
 /**
- * Brands without a Simple Icons glyph fall back to a monogram badge
- * (SolidWorks, Fusion 360, Excel, Power BI, SPSS, Matlab, Tableau).
+ * Icon sources, in order of preference: `image` (artwork under /public),
+ * `icon` (Simple Icons glyph), then `monogram` for brands with neither.
  */
 export const STACKS: StackProps[] = [
   {
     name: "SolidWorks",
-    monogram: "SW",
+    image: "/images/stacks/solidworks.png",
     color: "bg-[#e30021]",
     categories: ["Main", "Design"],
   },
@@ -120,13 +118,13 @@ export const STACKS: StackProps[] = [
   },
   {
     name: "Blender",
-    icon: <SiBlender size={iconSize} />,
+    image: "/images/stacks/blender.png",
     color: "bg-[#ea7600]",
     categories: ["Design"],
   },
   {
     name: "Python",
-    icon: <SiPython size={iconSize} />,
+    image: "/images/stacks/python.png",
     color: "bg-[#3776ab]",
     categories: ["Coding"],
   },
@@ -210,13 +208,13 @@ export const STACKS: StackProps[] = [
   },
   {
     name: "Matlab",
-    monogram: "ML",
+    image: "/images/stacks/matlab.png",
     color: "bg-[#0076a8]",
     categories: ["Statistics"],
   },
   {
     name: "Tableau",
-    monogram: "TB",
+    image: "/images/stacks/tableau.png",
     color: "bg-[#1f77b4]",
     categories: ["Statistics"],
   },
