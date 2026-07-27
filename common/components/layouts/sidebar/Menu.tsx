@@ -1,0 +1,25 @@
+import type { MenuItemProps } from "@/common/types";
+
+import MenuItem from "./MenuItem";
+
+interface MenuProps {
+  title?: string;
+  list: MenuItemProps[];
+}
+
+const Menu = ({ title, list }: MenuProps) => {
+  return (
+    <nav className="flex flex-col gap-y-1">
+      {title && (
+        <div className="mb-2 ml-2 mt-1 hidden text-sm text-neutral-600 dark:text-neutral-500 lg:block">
+          {title}
+        </div>
+      )}
+      {list.map((item) => (
+        <MenuItem key={item.href} {...item} />
+      ))}
+    </nav>
+  );
+};
+
+export default Menu;
