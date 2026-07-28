@@ -2,7 +2,7 @@ import type { CareerProps } from "../types";
 
 export const CAREERS: CareerProps[] = [
   {
-    position: "Supporting Staff of Business Process",
+    position: "Sub-Profesional Expert Staff of Business Process",
     company:
       "Ministry of Agrarian Affairs and Spatial Planning / National Land Agency (ATR/BPN)",
     logo: "/images/careers/atr-bpn.png",

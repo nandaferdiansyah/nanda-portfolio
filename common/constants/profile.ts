@@ -9,6 +9,7 @@ export const PROFILE = {
   phone: "+62 857-1359-5915",
   phone_raw: "6285713595915",
   avatar: "/images/nanda.jpg",
+  photo: "/images/nanda-about.jpg",
   resume_url: "/cv-nanda-ferdiansyah.pdf",
   bio: [
     "A professional with over 4 years of experience in design, business process optimization, and 3D design engineering. I design and analyze Business Process Reengineering (BPR) projects — identifying inefficiencies, mapping workflows, and implementing technology-driven solutions that raise productivity and operational efficiency.",

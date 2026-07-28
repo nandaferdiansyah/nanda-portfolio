@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRightShort as ArrowIcon } from "react-icons/bs";
 
@@ -10,17 +11,32 @@ import { formatMonthYear } from "@/common/helpers";
 const About = () => {
   return (
     <>
-      <section className="space-y-4 leading-7 text-neutral-600 dark:text-neutral-300">
-        {PROFILE.bio.map((paragraph, index) => (
-          <p key={index}>{paragraph}</p>
-        ))}
-        <p>
-          Most of my week splits between two worlds: mapping and reengineering
-          business processes for the Ministry of ATR/BPN, and designing
-          production-ready parts as a 3D design engineer. Both come back to the
-          same Industrial Engineering habit — look at the whole system, find
-          where it loses time or safety margin, then redesign that part.
-        </p>
+      {/* Photo sits above the text on phones, beside it from md upwards. */}
+      <section className="flex flex-col-reverse gap-6 md:flex-row md:items-start md:gap-8">
+        <div className="space-y-4 leading-7 text-neutral-600 dark:text-neutral-300">
+          {PROFILE.bio.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+          <p>
+            Most of my week splits between two worlds: mapping and reengineering
+            business processes for the Ministry of ATR/BPN, and designing
+            production-ready parts as a 3D design engineer. Both come back to
+            the same Industrial Engineering habit — look at the whole system,
+            find where it loses time or safety margin, then redesign that part.
+          </p>
+        </div>
+
+        <div className="mx-auto w-48 shrink-0 sm:w-56 md:mx-0 md:w-52 lg:w-60">
+          <Image
+            src={PROFILE.photo}
+            alt={PROFILE.name}
+            width={800}
+            height={1200}
+            sizes="(max-width: 768px) 224px, 240px"
+            className="h-auto w-full rounded-xl border border-neutral-300 object-cover shadow-sm dark:border-neutral-700"
+            priority
+          />
+        </div>
       </section>
 
       <Breakline className="my-8" />

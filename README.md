@@ -76,7 +76,7 @@ All content lives in plain TypeScript files under `common/constants/` — no CMS
 
 ### Skill icons
 
-Each entry picks its artwork in this order: `image` (a file under `public/images/stacks/`), then `icon` (a Simple Icons glyph from `react-icons`), then `monogram`. SolidWorks, Blender, Python, Matlab, and Tableau use downloaded [Icons8](https://icons8.com) artwork — the free licence requires the credit line rendered in the sidebar footer, so keep it if you keep the icons.
+Each entry picks its artwork in this order: `image` (a file under `public/images/stacks/`), then `icon` (a Simple Icons glyph from `react-icons`), then `monogram`. SolidWorks, Blender, Python, Matlab, and Tableau use artwork downloaded from [Icons8](https://icons8.com), whose free tier asks for a visible credit — either keep a credit line on the site or swap those five files for licence-free equivalents.
 
 Entries without a glyph — brands like SolidWorks, Fusion 360, Excel, Power BI, SPSS, Matlab, Tableau, and every Business Process method (BPMN, Six Sigma, Lean, TPM, Kanban, Kaizen, VSM) — use a coloured monogram badge instead. Set `monogram` and `color` on the entry in `stacks.tsx`.
 
@@ -109,6 +109,7 @@ Long-lived tokens expire, so refresh the value periodically — if it expires, t
 | File                              | Used by                                                          |
 | --------------------------------- | ---------------------------------------------------------------- |
 | `public/images/nanda.jpg`         | Sidebar profile photo (falls back to an "NF" monogram if absent)  |
+| `public/images/nanda-about.jpg`   | Portrait beside the bio on `/about`                               |
 | `public/cv-nanda-ferdiansyah.pdf` | `PROFILE.resume_url`, if you want a downloadable CV link          |
 | `public/images/careers/*.png`     | Optional company logos referenced in `careers.ts`                 |
 | `public/images/education/*.png`   | Optional school logo referenced in `education.ts`                 |
