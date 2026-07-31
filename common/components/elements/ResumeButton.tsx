@@ -65,11 +65,13 @@ const ResumeButton = () => {
               className="flex h-full max-h-[92vh] w-full max-w-4xl flex-col overflow-hidden rounded-xl bg-white shadow-xl dark:bg-neutral-900"
             >
               <div className="flex items-center justify-between gap-3 border-b border-neutral-200 px-4 py-3 dark:border-neutral-800">
-                <div>
+                <div className="min-w-0">
                   <p className="font-medium text-neutral-800 dark:text-neutral-200">
                     Curriculum Vitae
                   </p>
-                  <p className="text-xs text-neutral-500 dark:text-neutral-400">
+                  {/* Kept to one line so narrow phones spend their height on
+                      the preview rather than on the role list. */}
+                  <p className="truncate text-xs text-neutral-500 dark:text-neutral-400">
                     {PROFILE.name} · {PROFILE.role}
                   </p>
                 </div>
