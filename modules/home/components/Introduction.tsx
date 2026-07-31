@@ -1,5 +1,4 @@
-import { HiOutlineDocumentArrowDown as DownloadIcon } from "react-icons/hi2";
-
+import ResumeButton from "@/common/components/elements/ResumeButton";
 import { PROFILE } from "@/common/constants/profile";
 
 const Introduction = () => {
@@ -18,14 +17,7 @@ const Introduction = () => {
       </div>
 
       <div className="pt-2">
-        <a
-          href={PROFILE.resume_url}
-          download
-          className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-primary-700 lg:hover:scale-105"
-        >
-          <DownloadIcon size={18} />
-          Download CV
-        </a>
+        <ResumeButton />
       </div>
     </section>
   );
