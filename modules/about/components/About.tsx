@@ -5,6 +5,7 @@ import { BsArrowRightShort as ArrowIcon } from "react-icons/bs";
 import Breakline from "@/common/components/elements/Breakline";
 import Card from "@/common/components/elements/Card";
 import { CAREERS } from "@/common/constants/careers";
+import { EDUCATION } from "@/common/constants/education";
 import { PROFILE } from "@/common/constants/profile";
 import { formatMonthYear } from "@/common/helpers";
 
@@ -39,6 +40,47 @@ const About = () => {
             className="h-auto w-full rounded-xl border border-neutral-300 object-cover shadow-sm dark:border-neutral-700"
             priority
           />
+        </div>
+      </section>
+
+      <Breakline className="my-8" />
+
+      <section className="space-y-4">
+        <h2 className="text-xl font-medium text-neutral-800 dark:text-neutral-300">
+          Education
+        </h2>
+        <div className="grid gap-4 md:grid-cols-2">
+          {EDUCATION.map((education) => (
+            <Card key={education.school} className="p-5">
+              <div className="flex flex-wrap items-start justify-between gap-2">
+                <h3 className="font-medium text-neutral-800 dark:text-neutral-200">
+                  {education.school}
+                </h3>
+                <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                  {education.start_year === education.end_year
+                    ? education.start_year
+                    : `${education.start_year} — ${education.end_year}`}
+                </span>
+              </div>
+
+              <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                {education.degree} · {education.major}
+                {education.GPA ? ` · GPA ${education.GPA}` : ""}
+              </p>
+
+              <p className="mt-2 text-xs text-neutral-500">
+                {education.location}
+              </p>
+
+              {education.notes && (
+                <ul className="mt-3 ml-4 list-disc space-y-1.5 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
+                  {education.notes.map((note, index) => (
+                    <li key={index}>{note}</li>
+                  ))}
+                </ul>
+              )}
+            </Card>
+          ))}
         </div>
       </section>
 

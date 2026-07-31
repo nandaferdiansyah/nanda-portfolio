@@ -48,8 +48,8 @@ npx eslint .     # lint
 | Route              | Contents                                                  |
 | ------------------ | --------------------------------------------------------- |
 | `/`                | Intro, skills by category, what I do, featured projects    |
-| `/about`           | Longer bio, stats, current roles, working approach         |
-| `/career`          | Work experience (expandable details) + education           |
+| `/about`           | Longer bio, education, current roles, working approach     |
+| `/career`          | Work experience (expandable details)                       |
 | `/projects`        | Project list with category filter                          |
 | `/projects/[slug]` | Project detail: story, highlights, tools used              |
 | `/portfolio`       | Design gallery grouped by tool, with a lightbox viewer     |
@@ -67,7 +67,7 @@ All content lives in plain TypeScript files under `common/constants/` — no CMS
 | `menu.tsx`        | Sidebar navigation items                                   |
 | `stacks.tsx`      | Skills grouped into Main / Business Process / Design / Coding / Statistics (the `All` tab is generated automatically) |
 | `careers.ts`      | Work experience entries                                    |
-| `education.ts`    | Education entries                                          |
+| `education.ts`    | Education entries, shown on `/about`                       |
 | `projects.ts`     | Projects and their detail pages                            |
 | `portfolio.ts`    | Gallery images on `/portfolio` (title, tool, description)  |
 | `achievements.ts` | Patents, certifications, programs, awards                  |

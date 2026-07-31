@@ -13,7 +13,15 @@ export const EDUCATION: EducationProps[] = [
     link: "https://unimma.ac.id/",
     notes: [
       'Thesis: "Inspection Monitoring System Model to Detect Leakage Risk Level and Inspection Scheduling on LPG Storage Tanks".',
-      "Student Mobility Program at Universiti Teknikal Malaysia Melaka — Mechanical Engineering (2019).",
     ],
+  },
+  {
+    school: "Universiti Teknikal Malaysia Melaka",
+    major: "Mechanical and Design Engineering",
+    location: "Durian Tunggal, Melaka, Malaysia 🇲🇾",
+    degree: "Student Mobility Program (4 Month)",
+    start_year: 2019,
+    end_year: 2019,
+    link: "https://www.utem.edu.my/",
   },
 ];

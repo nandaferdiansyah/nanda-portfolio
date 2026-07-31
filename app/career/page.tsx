@@ -6,7 +6,7 @@ import Career from "@/modules/career/components/Career";
 export const metadata: Metadata = {
   title: "Career",
   description:
-    "Work experience and education of Nanda Ferdiansyah — business process, design engineering, and training roles.",
+    "Work experience of Nanda Ferdiansyah — business process, design engineering, and training roles.",
 };
 
 export default function CareerPage() {
@@ -14,7 +14,7 @@ export default function CareerPage() {
     <>
       <PageHeading
         title="Career"
-        description="A timeline of the roles I have taken and the education behind them."
+        description="A timeline of the roles I have taken."
       />
       <Career />
     </>
