@@ -12,7 +12,7 @@ const Introduction = () => {
       <p className="text-neutral-600 dark:text-neutral-400">{PROFILE.role}</p>
 
       <div className="mt-6 space-y-4 leading-7 text-neutral-600 dark:text-neutral-300">
-        {PROFILE.bio.map((paragraph, index) => (
+        {PROFILE.home_bio.map((paragraph, index) => (
           <p key={index}>{paragraph}</p>
         ))}
       </div>

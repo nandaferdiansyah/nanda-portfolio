@@ -14,15 +14,18 @@ const About = () => {
       {/* Photo sits above the text on phones, beside it from md upwards. */}
       <section className="flex flex-col-reverse gap-6 md:flex-row md:items-start md:gap-8">
         <div className="space-y-4 leading-7 text-neutral-600 dark:text-neutral-300">
-          {PROFILE.bio.map((paragraph, index) => (
+          {PROFILE.about_bio.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
           <p>
-            Most of my week splits between two worlds: mapping and reengineering
-            business processes for the Ministry of ATR/BPN, and designing
-            production-ready parts as a 3D design engineer. Both come back to
-            the same Industrial Engineering habit — look at the whole system,
-            find where it loses time or safety margin, then redesign that part.
+            Open to {PROFILE.open_to}. Reach me at{" "}
+            <a
+              href={`mailto:${PROFILE.email}`}
+              className="text-primary transition-colors duration-300 hover:text-primary-700"
+            >
+              {PROFILE.email}
+            </a>
+            .
           </p>
         </div>
 

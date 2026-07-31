@@ -1,7 +1,7 @@
 export const PROFILE = {
   name: "Nanda Ferdiansyah",
   username: "@nandaferdiansyah",
-  role: "Industrial Engineer · 3D Design Engineer · Business Process Analyst",
+  role: "Business Process Analyst · Industrial Engineer · 3D Design Engineer",
   headline: "Hi, I'm Nanda Ferdiansyah",
   location: "Magelang, Central Java, Indonesia 🇮🇩",
   location_type: "Hybrid / Remote",
@@ -11,10 +11,16 @@ export const PROFILE = {
   avatar: "/images/nanda.jpg",
   photo: "/images/nanda-about.jpg",
   resume_url: "/cv-nanda-ferdiansyah.pdf",
-  bio: [
-    "A professional with over 4 years of experience in design, business process optimization, and 3D design engineering. I design and analyze Business Process Reengineering (BPR) projects — identifying inefficiencies, mapping workflows, and implementing technology-driven solutions that raise productivity and operational efficiency.",
-    "As a 3D Design Engineer I work daily with CAD software to develop manufacturable, precise, and safe product designs. With a background in Industrial Engineering, I combine analytical and creative approaches to solve both technical and managerial challenges.",
+  home_bio: [
+    "Four years redesigning how work flows through organizations with Lean and Six Sigma. I read a process end to end, find the stage holding everything back, redesign it, and write it into an SOP so the fix stays. Every decision rests on data I process in Looker Studio and Python.",
+    "On the technical side, I develop components in SolidWorks, Inventor, and Fusion 360, and test them in Ansys until they are ready for production.",
+    "Scroll for the projects.",
   ],
+  about_bio: [
+    "I work in business process reengineering. I map how a process runs, locate the bottlenecks and waste, then redesign that part using Lean and Six Sigma methods such as value stream mapping and DMAIC. I support the analysis with output data, processed in Looker Studio and Python.",
+    "Part of my time also goes to 3D design. I develop components in SolidWorks, Inventor, and Fusion 360, then run strength tests in Ansys to find the critical points before production. The result is a working drawing with tolerances and safety margins the workshop can build from.",
+  ],
+  open_to: "Business Process Analyst and 3D Design Engineer roles",
   services: [
     {
       title: "3D Design Engineering",
