@@ -51,34 +51,49 @@ const About = () => {
         </h2>
         <div className="grid gap-4 md:grid-cols-2">
           {EDUCATION.map((education) => (
-            <Card key={education.school} className="p-5">
-              <div className="flex flex-wrap items-start justify-between gap-2">
-                <h3 className="font-medium text-neutral-800 dark:text-neutral-200">
-                  {education.school}
-                </h3>
-                <span className="text-sm text-neutral-500 dark:text-neutral-400">
-                  {education.start_year === education.end_year
-                    ? education.start_year
-                    : `${education.start_year} — ${education.end_year}`}
+            <Card key={education.school} className="flex gap-4 p-5">
+              {education.logo && (
+                // White tile keeps both crests readable in either theme.
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-neutral-200 bg-white p-1 dark:border-neutral-700">
+                  <Image
+                    src={education.logo}
+                    alt={education.school}
+                    width={48}
+                    height={48}
+                    className="h-full w-full object-contain"
+                  />
                 </span>
-              </div>
-
-              <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
-                {education.degree} · {education.major}
-                {education.GPA ? ` · GPA ${education.GPA}` : ""}
-              </p>
-
-              <p className="mt-2 text-xs text-neutral-500">
-                {education.location}
-              </p>
-
-              {education.notes && (
-                <ul className="mt-3 ml-4 list-disc space-y-1.5 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
-                  {education.notes.map((note, index) => (
-                    <li key={index}>{note}</li>
-                  ))}
-                </ul>
               )}
+
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-start justify-between gap-x-2 gap-y-1">
+                  <h3 className="font-medium text-neutral-800 dark:text-neutral-200">
+                    {education.school}
+                  </h3>
+                  <span className="text-sm text-neutral-500 dark:text-neutral-400">
+                    {education.start_year === education.end_year
+                      ? education.start_year
+                      : `${education.start_year} — ${education.end_year}`}
+                  </span>
+                </div>
+
+                <p className="mt-1 text-sm text-neutral-600 dark:text-neutral-400">
+                  {education.degree} · {education.major}
+                  {education.GPA ? ` · GPA ${education.GPA}` : ""}
+                </p>
+
+                <p className="mt-2 text-xs text-neutral-500">
+                  {education.location}
+                </p>
+
+                {education.notes && (
+                  <ul className="mt-3 ml-4 list-disc space-y-1.5 text-sm leading-6 text-neutral-600 dark:text-neutral-400">
+                    {education.notes.map((note, index) => (
+                      <li key={index}>{note}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
             </Card>
           ))}
         </div>

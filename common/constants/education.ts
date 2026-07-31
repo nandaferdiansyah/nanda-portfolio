@@ -4,7 +4,7 @@ export const EDUCATION: EducationProps[] = [
   {
     school: "University of Muhammadiyah Magelang",
     major: "Industrial Engineering",
-    logo: "/images/education/ummgl.png",
+    logo: "/images/education/unimma.png",
     location: "Magelang, Central Java, Indonesia 🇮🇩",
     degree: "Bachelor of Engineering",
     GPA: "3.86/4.00",
@@ -18,6 +18,7 @@ export const EDUCATION: EducationProps[] = [
   {
     school: "Universiti Teknikal Malaysia Melaka",
     major: "Mechanical and Design Engineering",
+    logo: "/images/education/utem.png",
     location: "Durian Tunggal, Melaka, Malaysia 🇲🇾",
     degree: "Student Mobility Program (4 Month)",
     start_year: 2019,
