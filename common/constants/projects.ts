@@ -1,5 +1,6 @@
 import type { ProjectProps } from "../types";
 import { E_SIMPEL_SCREENSHOTS } from "./e-simpel";
+import { RBI_LPG_SCREENSHOTS } from "./rbi-lpg";
 
 export const PROJECTS: ProjectProps[] = [
   {
@@ -82,14 +83,26 @@ export const PROJECTS: ProjectProps[] = [
     description:
       "Risk-based inspection model that detects leakage risk levels and generates inspection schedules for LPG storage tanks — filed as a patent.",
     categories: ["Design Engineering", "Data & Automation"],
-    year: "2020",
-    stacks: ["SolidWorks", "Ansys", "Python", "Matlab", "SPSS"],
+    year: "2020 — Present",
+    stacks: [
+      "SolidWorks",
+      "Ansys",
+      "Python",
+      "Matlab",
+      "SPSS",
+      "TypeScript",
+      "Next.js",
+      "PostgreSQL",
+    ],
+    link_repo: "https://github.com/nandaferdiansyah/rbi-lpg",
+    screenshots: RBI_LPG_SCREENSHOTS,
     is_featured: true,
     content: [
       "Built during my internship at PT Pertamina Gas (SPPBE PT Kayu Lima Magelang) and developed further as my final thesis.",
       "The model analyses the remaining life of LPG storage tanks and assesses corrosion levels in pipes and pressure vessels, using risk-based inspection (RBI) per API 581 to classify leakage risk and derive an inspection schedule from that risk class.",
       "It sits between two disciplines: the pressure vessel design and flow simulation on one side, and the data work — corrosion rate calculation, risk scoring, and automated schedule generation — on the other.",
       "The resulting security system was filed as a patent application (S00202004467) in 2020.",
+      "The original thesis application (Visual Basic .NET + MySQL) has since been rewritten as an open-source web application: a Next.js 15 app with a pure-TypeScript RBI engine covering POF (API 581 Part 2), COF Level 1 (Part 3), the 5×5 risk matrix, and API 510 inspection scheduling — backed by 94 unit tests and runnable without any database setup via PGlite.",
     ],
     highlights: [
       "RBI analysis following the API 581 standard.",
@@ -97,6 +110,7 @@ export const PROJECTS: ProjectProps[] = [
       "Corrosion and remaining-life calculation from inspection data.",
       "Inspection scheduling driven by calculated risk level.",
       "Patent application S00202004467 (2020).",
+      "Open-source web rewrite of the thesis application, with the full RBI calculation engine in TypeScript.",
     ],
   },
   {
