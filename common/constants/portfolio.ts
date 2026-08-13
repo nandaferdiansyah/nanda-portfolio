@@ -1,4 +1,5 @@
 import { E_SIMPEL_SCREENSHOTS, type ScreenshotProps } from "./e-simpel";
+import { RBI_LPG_SCREENSHOTS } from "./rbi-lpg";
 
 export interface PortfolioItemProps {
   src: string;
@@ -26,6 +27,24 @@ export const PORTFOLIO_ITEMS: PortfolioItemProps[] = [
       {
         label: "Read the case study",
         href: "/projects/simpel-ketatalaksanaan-system",
+      },
+    ],
+  },
+  {
+    src: "/images/rbi-lpg/01-dashboard.png",
+    title: "RBI-LPG — Storage Tank Risk-Based Inspection",
+    tool: "Web System",
+    description:
+      "Web application for risk-based inspection of LPG storage tanks per API RP 580/581 and API 510 — from thickness data to risk matrix and inspection schedule.",
+    screenshots: RBI_LPG_SCREENSHOTS,
+    links: [
+      {
+        label: "View on GitHub",
+        href: "https://github.com/nandaferdiansyah/rbi-lpg",
+      },
+      {
+        label: "Read the case study",
+        href: "/projects/lpg-storage-tank-inspection-monitoring",
       },
     ],
   },
